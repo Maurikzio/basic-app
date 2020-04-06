@@ -2,8 +2,7 @@ import React from 'react';
 
 import './post-content.css'
 
-function PostContent({ header, date, body }){
-    const {name, nickname} = header;
+function PostContent({ name, nickname, date, content, image }){
     return(
         <section className='postContent'>
             <div className='postHeader'>
@@ -12,8 +11,8 @@ function PostContent({ header, date, body }){
                 <p className='postDate'>{date}</p>
             </div>
             <div className='postBody'>
-                <p>{body.content}</p>
-                <img src={body.image}/>
+                <p>{content}</p>
+                <img src={image}/>
             </div>
         </section>
     )
